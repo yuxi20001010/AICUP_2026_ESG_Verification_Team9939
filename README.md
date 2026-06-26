@@ -8,7 +8,7 @@
 
 ## 🌟 本階段模型特色與創新性
 
-在作為基礎模型（Base Models）的訓練過程中，本專案針對單一模型引入了以下客製化改良，確保提供給第二階段的機率特徵具有足夠的泛化能力與多樣性：
+在訓練過程中，本專案針對單一模型引入了以下客製化改良，確保提供給第二階段的機率特徵具有足夠的泛化能力與多樣性：
 
 * **多任務聯合學習架構**: 將四項分類任務（promise_status, verification_timeline, evidence_status, evidence_quality）整合於單一模型中同步學習，使模型學習到跨任務的共同語義表示。
 * **Masked Mean Pooling**: 捨棄標準的 `[CLS]` token，對所有有效 token 的隱藏向量依 attention mask 加權平均，使句子表示能均勻涵蓋全文語意，有效減少長句資訊遺失。
